@@ -27,11 +27,11 @@ function processFirstItem(stringList, callback) {
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
- * 
+ * Counter1 has closure because it returns  a function and the variable in defined aand used in the function scope and not the global.
  * 2. Which of the two uses a closure? How can you tell?
- * 
+ * counter1 becasue it returns a function instead of using a veriable inthe global scope.
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
- *
+ * counter1 is better if you only want tyo mutate the count through counter1. Counter2 is better if you want to reference and mutate count in other ways.
 */
 
 // counter1 code
@@ -56,9 +56,9 @@ function counter2() {
 
 Write a function called `inning` that generates a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
+function inning(points) {
 
-    /*Code Here*/
+    return Math.floor
 
 }
 
@@ -76,10 +76,36 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(/*code Here*/){
+function finalScore(cb, numOfInnings) {
 
-  /*Code Here*/
+  let totalpoints = [];
 
+  for (let i = 0; i <=numOfInnings; i++) {
+     totalpoints.push(inning(3));
+  }
+  
+  const add = (a, b) => a + b;
+  const sum2 = totalpoints2.reduce(add2);
+
+  let totalpoints2 = [];
+
+
+  for (let i=0; i <= numOfInnings; i++) {
+    totalpoints2.push(inning(3));
+  }
+
+  const add2 = (a, b) => a + b;
+  const sum2 =totalpoints2.reduce(add2);
+
+  let homePoints = sum;
+  let awayPoints = sum2;
+
+  let game = {
+   home: homePoints,
+   away: awayPoints,
+
+  }
+  return game;
 }
 
 /* Task 4: 
